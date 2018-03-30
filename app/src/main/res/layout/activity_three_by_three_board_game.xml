@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.tictac.DefaultGameActivity"
+    android:layout_margin="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:background="@android:color/holo_purple"
+            android:id="@+id/text_view_11"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:id="@+id/text_view_12" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:background="@android:color/holo_purple"
+            android:id="@+id/text_view_13"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:id="@+id/text_view_21"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:background="@android:color/holo_purple"
+            android:id="@+id/text_view_22"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:id="@+id/text_view_23"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:background="@android:color/holo_purple"
+            android:id="@+id/text_view_31"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:id="@+id/text_view_32"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:background="@android:color/holo_purple"
+            android:id="@+id/text_view_33"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="ScoreBoard"
+        android:padding="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:id="@+id/player_one"
+                android:text="Player One"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:text="0"
+                android:id="@+id/player_x_score"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+    <View
+    android:layout_width="2dp"
+    android:layout_height="match_parent"
+        android:background="@android:color/black"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:id="@+id/player_two"
+                android:text="Player Two"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="32sp"
+                android:text="0"
+                android:id="@+id/player_o_score"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:onClick="resetBoard"/>
+
+    </LinearLayout>
+
+</ScrollView>
