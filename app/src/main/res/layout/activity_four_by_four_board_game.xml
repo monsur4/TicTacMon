@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
     <LinearLayout
@@ -174,7 +174,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="24sp"
-        android:text="ScoreBoard"
+        android:text="@string/score_board"
         android:padding="16dp"/>
 
     <LinearLayout
@@ -192,7 +192,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/player_one"
                 android:textSize="32sp"
-                android:text="Player One"
+                android:text="@string/player_one"
                 android:gravity="center_horizontal"/>
             <TextView
                 android:layout_width="match_parent"
@@ -216,7 +216,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="32sp"
                 android:id="@+id/player_two"
-                android:text="Player Two"
+                android:text="@string/player_two"
                 android:gravity="center_horizontal"/>
             <TextView
                 android:layout_width="match_parent"
@@ -232,7 +232,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset"
+        android:text="@string/reset"
         android:layout_gravity="center_horizontal"
         android:layout_margin="8dp"
         android:onClick="resetBoard"/>

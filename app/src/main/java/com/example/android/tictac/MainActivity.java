@@ -9,13 +9,13 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    RadioButton singlePlayer;
-    RadioButton twoPlayer;
-    RadioButton playAs_X;
-    RadioButton playAs_O;
-    RadioButton threeByThreeBoard;
-    RadioButton fourByFourBoard;
-    RadioButton fiveByFiveBoard;
+    private RadioButton singlePlayer;
+    private RadioButton twoPlayer;
+    private RadioButton playAs_X;
+    private RadioButton playAs_O;
+    private RadioButton threeByThreeBoard;
+    private RadioButton fourByFourBoard;
+    private RadioButton fiveByFiveBoard;
 
 
     @Override
@@ -23,19 +23,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        singlePlayer = (RadioButton) findViewById(R.id.single_player);
-        twoPlayer = (RadioButton) findViewById(R.id.two_players);
-        playAs_X = (RadioButton) findViewById(R.id.play_as_X);
-        playAs_O = (RadioButton) findViewById(R.id.play_as_O);
-        threeByThreeBoard = (RadioButton) findViewById(R.id.three_by_three_board);
-        fourByFourBoard = (RadioButton) findViewById(R.id.four_by_four_board);
-        fiveByFiveBoard = (RadioButton) findViewById(R.id.five_by_five_board);
+        singlePlayer = findViewById(R.id.single_player);
+        twoPlayer = findViewById(R.id.two_players);
+        playAs_X = findViewById(R.id.play_as_X);
+        playAs_O = findViewById(R.id.play_as_O);
+        threeByThreeBoard = findViewById(R.id.three_by_three_board);
+        fourByFourBoard = findViewById(R.id.four_by_four_board);
+        fiveByFiveBoard = findViewById(R.id.five_by_five_board);
 
         singlePlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //((TextView) findViewById(R.id.letter_selection_textview)).setText("Choose Your Letter");
-                ((TextView) findViewById(R.id.letter_selection_textview)).setEnabled(true);
+                findViewById(R.id.letter_selection_textview).setEnabled(true);
                 playAs_X.setEnabled(true);
                 playAs_O.setEnabled(true);
             }
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         twoPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((TextView) findViewById(R.id.letter_selection_textview)).setEnabled(false);
+                findViewById(R.id.letter_selection_textview).setEnabled(false);
                 playAs_X.setEnabled(false);
                 playAs_O.setEnabled(false);
             }

@@ -8,37 +8,37 @@ import android.widget.Toast;
 
 public class TwoPlayer_three_by_three extends AppCompatActivity {
 
-    TextView TextView11;
-    TextView TextView12;
-    TextView TextView13;
-    TextView TextView21;
-    TextView TextView22;
-    TextView TextView23;
-    TextView TextView31;
-    TextView TextView32;
-    TextView TextView33;
+    private TextView TextView11;
+    private TextView TextView12;
+    private TextView TextView13;
+    private TextView TextView21;
+    private TextView TextView22;
+    private TextView TextView23;
+    private TextView TextView31;
+    private TextView TextView32;
+    private TextView TextView33;
 
-    int playerOneScore = 0;
-    int playerTwoScore = 0;
+    private int playerOneScore = 0;
+    private int playerTwoScore = 0;
 
-    int playerToStart;
+    private int playerToStart;
 
-    int playerToPlay;
+    private int playerToPlay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_three_by_three_board_game);
 
-        TextView11 = (TextView) findViewById(R.id.text_view_11);
-        TextView12 = (TextView) findViewById(R.id.text_view_12);
-        TextView13 = (TextView) findViewById(R.id.text_view_13);
-        TextView21 = (TextView) findViewById(R.id.text_view_21);
-        TextView22 = (TextView) findViewById(R.id.text_view_22);
-        TextView23 = (TextView) findViewById(R.id.text_view_23);
-        TextView31 = (TextView) findViewById(R.id.text_view_31);
-        TextView32 = (TextView) findViewById(R.id.text_view_32);
-        TextView33 = (TextView) findViewById(R.id.text_view_33);
+        TextView11 = findViewById(R.id.text_view_11);
+        TextView12 = findViewById(R.id.text_view_12);
+        TextView13 = findViewById(R.id.text_view_13);
+        TextView21 = findViewById(R.id.text_view_21);
+        TextView22 = findViewById(R.id.text_view_22);
+        TextView23 = findViewById(R.id.text_view_23);
+        TextView31 = findViewById(R.id.text_view_31);
+        TextView32 = findViewById(R.id.text_view_32);
+        TextView33 = findViewById(R.id.text_view_33);
 
         playerToStart = 1;
 
@@ -234,7 +234,7 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
         });
     }
 
-    public boolean checkWinner() {
+    private boolean checkWinner() {
         if (TextView11.getText() != "" && TextView11.getText() == TextView12.getText() && TextView11.getText() == TextView13.getText()) {
             disableTextViews();
             assignPlayerScore();
@@ -295,7 +295,7 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
         return false;
     }
 
-    public void disableTextViews() {
+    private void disableTextViews() {
         TextView11.setClickable(false);
         TextView12.setClickable(false);
         TextView13.setClickable(false);
@@ -333,7 +333,7 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
         Toast.makeText(this, "Player " + playerToStart + " starts this game.", Toast.LENGTH_LONG).show();
     }
 
-    public void assignPlayerScore(){
+    private void assignPlayerScore(){
         if (playerToPlay == 2 && playerToStart == 1){
             playerOneScore++;
             displayPlayerOneScore();
@@ -356,11 +356,11 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
         }
     }
 
-    public void displayPlayerOneScore() {
+    private void displayPlayerOneScore() {
         ((TextView) findViewById(R.id.player_x_score)).setText(String.valueOf(playerOneScore));
     }
 
-    public void displayPlayerTwoScore() {
+    private void displayPlayerTwoScore() {
         ((TextView) findViewById(R.id.player_o_score)).setText(String.valueOf(playerTwoScore));
     }
 }

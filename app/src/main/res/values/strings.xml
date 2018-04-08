@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Tic Tac Mon</string>
+    <string name="select_your_options">Select Your Options</string>
+    <string name="game_type">Game Type</string>
+    <string name="single_player_vs_computer">Single Player Vs Computer</string>
+    <string name="two_players">Two Players</string>
+    <string name="select_letter">Select Letter</string>
+    <string name="x">X</string>
+    <string name="o">O</string>
+    <string name="board_size">Board Size</string>
+    <string name="three_by_three">3 by 3</string>
+    <string name="four_by_four">4 by 4</string>
+    <string name="five_by_five">5 by 5</string>
+    <string name="play_game">Play Game</string>
+    <string name="score_board">Score Board</string>
+    <string name="player_one">Player One</string>
+    <string name="player_two">Player Two</string>
+    <string name="reset">Reset</string>
+    <string name="player">Player</string>
+    <string name="computer">Computer</string>
 </resources>

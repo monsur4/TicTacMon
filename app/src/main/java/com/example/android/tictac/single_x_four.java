@@ -12,53 +12,53 @@ import java.util.Random;
 
 public class single_x_four extends AppCompatActivity {
 
-    TextView TextView11;
-    TextView TextView12;
-    TextView TextView13;
-    TextView TextView14;
-    TextView TextView21;
-    TextView TextView22;
-    TextView TextView23;
-    TextView TextView24;
-    TextView TextView31;
-    TextView TextView32;
-    TextView TextView33;
-    TextView TextView34;
-    TextView TextView41;
-    TextView TextView42;
-    TextView TextView43;
-    TextView TextView44;
+    private TextView TextView11;
+    private TextView TextView12;
+    private TextView TextView13;
+    private TextView TextView14;
+    private TextView TextView21;
+    private TextView TextView22;
+    private TextView TextView23;
+    private TextView TextView24;
+    private TextView TextView31;
+    private TextView TextView32;
+    private TextView TextView33;
+    private TextView TextView34;
+    private TextView TextView41;
+    private TextView TextView42;
+    private TextView TextView43;
+    private TextView TextView44;
 
-    ArrayList<TextView> List;
+    private ArrayList<TextView> List;
 
-    int playerXScore = 0;
-    int playerOScore = 0;
+    private int playerXScore = 0;
+    private int playerOScore = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_four_by_four_board_game);
-        TextView11 = (TextView) findViewById(R.id.text_view_11);
-        TextView12 = (TextView) findViewById(R.id.text_view_12);
-        TextView13 = (TextView) findViewById(R.id.text_view_13);
-        TextView14 = (TextView) findViewById(R.id.text_view_14);
-        TextView21 = (TextView) findViewById(R.id.text_view_21);
-        TextView22 = (TextView) findViewById(R.id.text_view_22);
-        TextView23 = (TextView) findViewById(R.id.text_view_23);
-        TextView24 = (TextView) findViewById(R.id.text_view_24);
-        TextView31 = (TextView) findViewById(R.id.text_view_31);
-        TextView32 = (TextView) findViewById(R.id.text_view_32);
-        TextView33 = (TextView) findViewById(R.id.text_view_33);
-        TextView34 = (TextView) findViewById(R.id.text_view_34);
-        TextView41 = (TextView) findViewById(R.id.text_view_41);
-        TextView42 = (TextView) findViewById(R.id.text_view_42);
-        TextView43 = (TextView) findViewById(R.id.text_view_43);
-        TextView44 = (TextView) findViewById(R.id.text_view_44);
+        TextView11 = findViewById(R.id.text_view_11);
+        TextView12 = findViewById(R.id.text_view_12);
+        TextView13 = findViewById(R.id.text_view_13);
+        TextView14 = findViewById(R.id.text_view_14);
+        TextView21 = findViewById(R.id.text_view_21);
+        TextView22 = findViewById(R.id.text_view_22);
+        TextView23 = findViewById(R.id.text_view_23);
+        TextView24 = findViewById(R.id.text_view_24);
+        TextView31 = findViewById(R.id.text_view_31);
+        TextView32 = findViewById(R.id.text_view_32);
+        TextView33 = findViewById(R.id.text_view_33);
+        TextView34 = findViewById(R.id.text_view_34);
+        TextView41 = findViewById(R.id.text_view_41);
+        TextView42 = findViewById(R.id.text_view_42);
+        TextView43 = findViewById(R.id.text_view_43);
+        TextView44 = findViewById(R.id.text_view_44);
 
-        ((TextView)findViewById(R.id.player_one)).setText("Player");
-        ((TextView)findViewById(R.id.player_two)).setText("Computer");
+        ((TextView)findViewById(R.id.player_one)).setText(R.string.player);
+        ((TextView)findViewById(R.id.player_two)).setText(R.string.computer);
 
-        List = new ArrayList<TextView>();
+        List = new ArrayList<>();
         List.add(TextView11);
         List.add(TextView12);
         List.add(TextView13);
@@ -89,7 +89,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -111,7 +111,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -133,7 +133,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -155,7 +155,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -177,7 +177,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -199,7 +199,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -221,7 +221,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -243,7 +243,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -265,7 +265,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -287,7 +287,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -309,7 +309,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -331,7 +331,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -353,7 +353,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -375,7 +375,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -397,7 +397,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -419,7 +419,7 @@ public class single_x_four extends AppCompatActivity {
                         return;
                     }
                     Random rand = new Random();
-                    final int randomNumber = rand.nextInt(List.size() + 0);
+                    final int randomNumber = rand.nextInt(List.size());
                     TextView computerPlay = List.get(randomNumber);
                     computerPlay.setText("O");
                     checkWinner();
@@ -429,7 +429,7 @@ public class single_x_four extends AppCompatActivity {
         });
     }
 
-    public boolean checkWinner() {
+    private boolean checkWinner() {
         if (TextView11.getText() == "X" && TextView11.getText() == TextView12.getText() && TextView11.getText() == TextView13.getText() && TextView11.getText() == TextView14.getText()) {
             disableTextViews();
             playerXScore++;
@@ -566,7 +566,7 @@ public class single_x_four extends AppCompatActivity {
         return false;
     }
 
-    public void disableTextViews() {
+    private void disableTextViews() {
         TextView11.setClickable(false);
         TextView12.setClickable(false);
         TextView13.setClickable(false);
@@ -639,11 +639,11 @@ public class single_x_four extends AppCompatActivity {
         List.add(TextView44);
     }
 
-    public void displayXScore() {
+    private void displayXScore() {
         ((TextView) findViewById(R.id.player_x_score)).setText(String.valueOf(playerXScore));
     }
 
-    public void displayOScore() {
+    private void displayOScore() {
         ((TextView) findViewById(R.id.player_o_score)).setText(String.valueOf(playerOScore));
     }
 }
