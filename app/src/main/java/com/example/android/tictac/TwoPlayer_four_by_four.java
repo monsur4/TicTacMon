@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 public class TwoPlayer_four_by_four extends AppCompatActivity {
 
+    /*instantiates all textViews*/
     private TextView TextView11;
     private TextView TextView12;
     private TextView TextView13;
@@ -25,17 +26,22 @@ public class TwoPlayer_four_by_four extends AppCompatActivity {
     private TextView TextView43;
     private TextView TextView44;
 
+    /*declares integer variables to hold the scores of both players*/
     private int playerOneScore = 0;
     private int playerTwoScore = 0;
 
+    /*declares an integer variable for player who is to start the game*/
     private int playerToStart;
 
+    /*declares an integer variable for whose turn is to play*/
     private int playerToPlay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_four_by_four_board_game);
+
+        /*initializes all textViews*/
         TextView11 = findViewById(R.id.text_view_11);
         TextView12 = findViewById(R.id.text_view_12);
         TextView13 = findViewById(R.id.text_view_13);
@@ -53,10 +59,16 @@ public class TwoPlayer_four_by_four extends AppCompatActivity {
         TextView43 = findViewById(R.id.text_view_43);
         TextView44 = findViewById(R.id.text_view_44);
 
+        /*initializes the player who is to start the game*/
         playerToStart = 1;
 
+        /*initializes whose turn is to play (so X always starts the game)*/
         playerToPlay = 1;
 
+        /*sets the textView's text to either X or O (if it is being selected for the first time)
+         *check whose turn is to play
+         *check if there is a winner
+         */
         TextView11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -394,74 +406,114 @@ public class TwoPlayer_four_by_four extends AppCompatActivity {
         });
     }
 
+    /*returns true if there is a winner*/
     private boolean checkWinner() {
-        if (TextView11.getText() != "" && TextView11.getText() == TextView12.getText() && TextView11.getText() == TextView13.getText() && TextView11.getText() == TextView14.getText()) {
+        if (TextView11.getText() != "" && TextView11.getText() == TextView12.getText() &&
+                TextView11.getText() == TextView13.getText() &&
+                TextView11.getText() == TextView14.getText()) {
             disableTextViews();
             assignPlayerScore();
-            Toast.makeText(this, TextView11.getText() + " wins.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, TextView11.getText() + " wins.",
+                    Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView21.getText() != "" && TextView21.getText() == TextView22.getText() && TextView21.getText() == TextView23.getText() && TextView21.getText() == TextView24.getText()) {
+        if (TextView21.getText() != "" && TextView21.getText() == TextView22.getText() &&
+                TextView21.getText() == TextView23.getText() &&
+                TextView21.getText() == TextView24.getText()) {
             disableTextViews();
             assignPlayerScore();
-            Toast.makeText(this, TextView21.getText() + " wins.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, TextView21.getText() + " wins.",
+                    Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView31.getText() != "" && TextView31.getText() == TextView32.getText() && TextView31.getText() == TextView33.getText() && TextView31.getText() == TextView34.getText()) {
+        if (TextView31.getText() != "" && TextView31.getText() == TextView32.getText() &&
+                TextView31.getText() == TextView33.getText() &&
+                TextView31.getText() == TextView34.getText()) {
             disableTextViews();
             assignPlayerScore();
-            Toast.makeText(this, TextView31.getText() + " wins.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, TextView31.getText() + " wins.",
+                    Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView41.getText() != "" && TextView41.getText() == TextView42.getText() && TextView41.getText() == TextView43.getText() && TextView41.getText() == TextView44.getText()) {
+        if (TextView41.getText() != "" && TextView41.getText() == TextView42.getText() &&
+                TextView41.getText() == TextView43.getText() &&
+                TextView41.getText() == TextView44.getText()) {
             disableTextViews();
             assignPlayerScore();
-            Toast.makeText(this, TextView41.getText() + " wins.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, TextView41.getText() + " wins.",
+                    Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView11.getText() != "" && TextView11.getText() == TextView21.getText() && TextView11.getText() == TextView31.getText() && TextView11.getText() == TextView41.getText()) {
+        if (TextView11.getText() != "" && TextView11.getText() == TextView21.getText() &&
+                TextView11.getText() == TextView31.getText() &&
+                TextView11.getText() == TextView41.getText()) {
             disableTextViews();
             assignPlayerScore();
-            Toast.makeText(this, TextView11.getText() + " wins.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, TextView11.getText() + " wins.",
+                    Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView12.getText() != "" && TextView12.getText() == TextView22.getText() && TextView12.getText() == TextView32.getText() && TextView12.getText() == TextView42.getText()) {
+        if (TextView12.getText() != "" && TextView12.getText() == TextView22.getText() &&
+                TextView12.getText() == TextView32.getText() &&
+                TextView12.getText() == TextView42.getText()) {
             disableTextViews();
             assignPlayerScore();
-            Toast.makeText(this, TextView12.getText() + " wins.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, TextView12.getText() + " wins.",
+                    Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView13.getText() != "" && TextView13.getText() == TextView23.getText() && TextView13.getText() == TextView33.getText() && TextView13.getText() == TextView43.getText()) {
+        if (TextView13.getText() != "" && TextView13.getText() == TextView23.getText() &&
+                TextView13.getText() == TextView33.getText() &&
+                TextView13.getText() == TextView43.getText()) {
             disableTextViews();
             assignPlayerScore();
-            Toast.makeText(this, TextView13.getText() + " wins.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, TextView13.getText() + " wins.",
+                    Toast.LENGTH_LONG).show();
             return true;
         }
 
-        if (TextView14.getText() != "" && TextView14.getText() == TextView24.getText() && TextView14.getText() == TextView34.getText() && TextView14.getText() == TextView44.getText()) {
+        if (TextView14.getText() != "" && TextView14.getText() == TextView24.getText() &&
+                TextView14.getText() == TextView34.getText() &&
+                TextView14.getText() == TextView44.getText()) {
             disableTextViews();
             assignPlayerScore();
-            Toast.makeText(this, TextView14.getText() + " wins.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, TextView14.getText() + " wins.",
+                    Toast.LENGTH_LONG).show();
             return true;
         }
 
-        if (TextView11.getText() != "" && TextView11.getText() == TextView22.getText() && TextView11.getText() == TextView33.getText() && TextView11.getText() == TextView44.getText()) {
+        if (TextView11.getText() != "" && TextView11.getText() == TextView22.getText() &&
+                TextView11.getText() == TextView33.getText() &&
+                TextView11.getText() == TextView44.getText()) {
             disableTextViews();
             assignPlayerScore();
-            Toast.makeText(this, TextView11.getText() + " wins.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, TextView11.getText() + " wins.",
+                    Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView14.getText() != "" && TextView14.getText() == TextView23.getText() && TextView14.getText() == TextView32.getText() && TextView14.getText() == TextView41.getText()) {
+        if (TextView14.getText() != "" && TextView14.getText() == TextView23.getText() &&
+                TextView14.getText() == TextView32.getText() &&
+                TextView14.getText() == TextView41.getText()) {
             disableTextViews();
             assignPlayerScore();
-            Toast.makeText(this, TextView14.getText() + " wins.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, TextView14.getText() + " wins.",
+                    Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView11.getText() != "" && TextView12.getText() != "" && TextView13.getText() != "" && TextView14.getText() != "" && TextView21.getText() != "" && TextView22.getText() != "" && TextView23.getText() != "" && TextView24.getText() != "" && TextView31.getText() != "" && TextView32.getText() != "" && TextView33.getText() != "" && TextView34.getText() != "" && TextView41.getText() != "" && TextView42.getText() != "" && TextView43.getText() != "" && TextView44.getText() != "") {
-            if (playerToStart == 1){
+        /*if the texts in all the textViews have been changed
+         *and there is no winner, then the game is a draw
+         *change the player who starts the next game*/
+        if (TextView11.getText() != "" && TextView12.getText() != "" && TextView13.getText() != ""
+                && TextView14.getText() != "" && TextView21.getText() != ""
+                && TextView22.getText() != "" && TextView23.getText() != ""
+                && TextView24.getText() != "" && TextView31.getText() != ""
+                && TextView32.getText() != "" && TextView33.getText() != ""
+                && TextView34.getText() != "" && TextView41.getText() != ""
+                && TextView42.getText() != "" && TextView43.getText() != ""
+                && TextView44.getText() != "") {
+            if (playerToStart == 1) {
                 playerToStart = 2;
-            }
-            else if (playerToStart == 2){
+            } else if (playerToStart == 2) {
                 playerToStart = 1;
             }
             Toast.makeText(this, "Game is a draw.", Toast.LENGTH_LONG).show();
@@ -469,29 +521,29 @@ public class TwoPlayer_four_by_four extends AppCompatActivity {
         return false;
     }
 
-    private void assignPlayerScore(){
-        if (playerToPlay == 2 && playerToStart == 1){
+    /*increments the score of the player who wins
+     *sets the player who starts the next game*/
+    private void assignPlayerScore() {
+        if (playerToPlay == 2 && playerToStart == 1) {
             playerOneScore++;
             displayPlayerOneScore();
             playerToStart = 2;
-        }
-        else if (playerToPlay == 1 && playerToStart == 1){
+        } else if (playerToPlay == 1 && playerToStart == 1) {
             playerTwoScore++;
             displayPlayerTwoScore();
             playerToStart = 1;
-        }
-        else if (playerToPlay == 2 && playerToStart == 2){
+        } else if (playerToPlay == 2 && playerToStart == 2) {
             playerTwoScore++;
             displayPlayerTwoScore();
             playerToStart = 1;
-        }
-        else if (playerToPlay == 1 && playerToStart == 2){
+        } else if (playerToPlay == 1 && playerToStart == 2) {
             playerOneScore++;
             displayPlayerOneScore();
             playerToStart = 2;
         }
     }
 
+    /*disables all the text views*/
     private void disableTextViews() {
         TextView11.setClickable(false);
         TextView12.setClickable(false);
@@ -511,7 +563,9 @@ public class TwoPlayer_four_by_four extends AppCompatActivity {
         TextView44.setClickable(false);
     }
 
+    /*resets the board*/
     public void resetBoard(View view) {
+        /*clears all the texts within the textViews*/
         TextView11.setText("");
         TextView12.setText("");
         TextView13.setText("");
@@ -529,6 +583,7 @@ public class TwoPlayer_four_by_four extends AppCompatActivity {
         TextView43.setText("");
         TextView44.setText("");
 
+        /*makes all textViews clickable*/
         TextView11.setClickable(true);
         TextView12.setClickable(true);
         TextView13.setClickable(true);
@@ -546,15 +601,18 @@ public class TwoPlayer_four_by_four extends AppCompatActivity {
         TextView43.setClickable(true);
         TextView44.setClickable(true);
 
+        /*resets turn so that X starts the new game */
         playerToPlay = 1;
 
         Toast.makeText(this, "Player " + playerToStart + " starts this game.", Toast.LENGTH_LONG).show();
     }
 
+    /*displays first player score*/
     private void displayPlayerOneScore() {
         ((TextView) findViewById(R.id.player_x_score)).setText(String.valueOf(playerOneScore));
     }
 
+    /*displays second player score*/
     private void displayPlayerTwoScore() {
         ((TextView) findViewById(R.id.player_o_score)).setText(String.valueOf(playerTwoScore));
     }

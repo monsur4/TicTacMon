@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //instantiates all radio buttons
     private RadioButton singlePlayer;
     private RadioButton twoPlayer;
     private RadioButton playAs_X;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //initializes all radio buttons
         singlePlayer = findViewById(R.id.single_player);
         twoPlayer = findViewById(R.id.two_players);
         playAs_X = findViewById(R.id.play_as_X);
@@ -31,16 +33,17 @@ public class MainActivity extends AppCompatActivity {
         fourByFourBoard = findViewById(R.id.four_by_four_board);
         fiveByFiveBoard = findViewById(R.id.five_by_five_board);
 
+        //if singlePlayer is selected, enable the options to select a letter
         singlePlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //((TextView) findViewById(R.id.letter_selection_textview)).setText("Choose Your Letter");
                 findViewById(R.id.letter_selection_textview).setEnabled(true);
                 playAs_X.setEnabled(true);
                 playAs_O.setEnabled(true);
             }
         });
 
+        //if twoPlayer is selected, disable the options to select a letter
         twoPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //launch activity based on the options selected
     public void playGame(View view) {
         if (singlePlayer.isChecked() && playAs_O.isChecked() && threeByThreeBoard.isChecked()) {
             Intent play = new Intent(this, Single_O_three.class);
@@ -93,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(play);
             return;
         }
-        //if no options are selected then open the default game (single player 3 by 3 game as player X)
+        //if no option is selected then open the default game activity (single player 3 by 3 game as player X)
         Intent play = new Intent(this, DefaultGameActivity.class);
         startActivity(play);
     }

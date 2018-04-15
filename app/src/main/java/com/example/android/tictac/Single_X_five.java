@@ -11,6 +11,7 @@ import java.util.Random;
 
 public class Single_X_five extends AppCompatActivity {
 
+    /*instantiates all textViews*/
     private TextView TextView11;
     private TextView TextView12;
     private TextView TextView13;
@@ -37,8 +38,10 @@ public class Single_X_five extends AppCompatActivity {
     private TextView TextView54;
     private TextView TextView55;
 
+    /*instantiates an arrayList*/
     private ArrayList<TextView> List;
 
+    /*declares integer variables to hold the scores of both players*/
     private int playerXScore = 0;
     private int playerOScore = 0;
 
@@ -46,6 +49,8 @@ public class Single_X_five extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_five_by_five_board_game);
+
+        /*initializes all textViews*/
         TextView11 = findViewById(R.id.text_view_11);
         TextView12 = findViewById(R.id.text_view_12);
         TextView13 = findViewById(R.id.text_view_13);
@@ -72,10 +77,14 @@ public class Single_X_five extends AppCompatActivity {
         TextView54 = findViewById(R.id.text_view_54);
         TextView55 = findViewById(R.id.text_view_55);
 
-        ((TextView)findViewById(R.id.player_one)).setText(R.string.player);
-        ((TextView)findViewById(R.id.player_two)).setText(R.string.computer);
+        /*replaces players with the appropriate text*/
+        ((TextView) findViewById(R.id.player_one)).setText(R.string.player);
+        ((TextView) findViewById(R.id.player_two)).setText(R.string.computer);
 
+        /*initializes the arrayList*/
         List = new ArrayList<>();
+
+        /*adds all textViews to the arrayList*/
         List.add(TextView11);
         List.add(TextView12);
         List.add(TextView13);
@@ -102,6 +111,10 @@ public class Single_X_five extends AppCompatActivity {
         List.add(TextView54);
         List.add(TextView55);
 
+        /*sets the textView's text to X(if it is being selected for the first time)
+         *check if there is a winner
+         *remove the textView from the arrayList
+         *computer then selects a random textView from those remaining in the arrayList to play*/
         TextView11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -653,57 +666,82 @@ public class Single_X_five extends AppCompatActivity {
         });
     }
 
+    /*returns true if there is a winner*/
     private boolean checkWinner() {
-        if (TextView11.getText() == "X" && TextView11.getText() == TextView12.getText() && TextView11.getText() == TextView13.getText() && TextView11.getText() == TextView14.getText() && TextView11.getText() == TextView15.getText()) {
+        if (TextView11.getText() == "X" && TextView11.getText() == TextView12.getText() &&
+                TextView11.getText() == TextView13.getText() &&
+                TextView11.getText() == TextView14.getText() &&
+                TextView11.getText() == TextView15.getText()) {
             disableTextViews();
             playerXScore++;
             displayXScore();
             Toast.makeText(this, "You win.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView21.getText() == "X" && TextView21.getText() == TextView22.getText() && TextView21.getText() == TextView23.getText() && TextView21.getText() == TextView24.getText() && TextView21.getText() == TextView25.getText()) {
+        if (TextView21.getText() == "X" && TextView21.getText() == TextView22.getText() &&
+                TextView21.getText() == TextView23.getText() &&
+                TextView21.getText() == TextView24.getText() &&
+                TextView21.getText() == TextView25.getText()) {
             disableTextViews();
             playerXScore++;
             displayXScore();
             Toast.makeText(this, "You win.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView31.getText() == "X" && TextView31.getText() == TextView32.getText() && TextView31.getText() == TextView33.getText() && TextView31.getText() == TextView34.getText() && TextView31.getText() == TextView35.getText()) {
+        if (TextView31.getText() == "X" && TextView31.getText() == TextView32.getText() &&
+                TextView31.getText() == TextView33.getText() &&
+                TextView31.getText() == TextView34.getText() &&
+                TextView31.getText() == TextView35.getText()) {
             disableTextViews();
             playerXScore++;
             displayXScore();
             Toast.makeText(this, "You win.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView41.getText() == "X" && TextView41.getText() == TextView42.getText() && TextView41.getText() == TextView43.getText() && TextView41.getText() == TextView44.getText() && TextView41.getText() == TextView45.getText()) {
+        if (TextView41.getText() == "X" && TextView41.getText() == TextView42.getText() &&
+                TextView41.getText() == TextView43.getText() &&
+                TextView41.getText() == TextView44.getText() &&
+                TextView41.getText() == TextView45.getText()) {
             disableTextViews();
             playerXScore++;
             displayXScore();
             Toast.makeText(this, "You win.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView51.getText() == "X" && TextView51.getText() == TextView52.getText() && TextView51.getText() == TextView53.getText() && TextView51.getText() == TextView54.getText() && TextView51.getText() == TextView55.getText()) {
+        if (TextView51.getText() == "X" && TextView51.getText() == TextView52.getText() &&
+                TextView51.getText() == TextView53.getText() &&
+                TextView51.getText() == TextView54.getText() &&
+                TextView51.getText() == TextView55.getText()) {
             disableTextViews();
             playerXScore++;
             displayXScore();
             Toast.makeText(this, "You win.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView11.getText() == "X" && TextView11.getText() == TextView21.getText() && TextView11.getText() == TextView31.getText() && TextView11.getText() == TextView41.getText() && TextView11.getText() == TextView51.getText()) {
+        if (TextView11.getText() == "X" && TextView11.getText() == TextView21.getText() &&
+                TextView11.getText() == TextView31.getText() &&
+                TextView11.getText() == TextView41.getText() &&
+                TextView11.getText() == TextView51.getText()) {
             disableTextViews();
             playerXScore++;
             displayXScore();
             Toast.makeText(this, "You win.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView12.getText() == "X" && TextView12.getText() == TextView22.getText() && TextView12.getText() == TextView32.getText() && TextView12.getText() == TextView42.getText() && TextView12.getText() == TextView52.getText()) {
+        if (TextView12.getText() == "X" && TextView12.getText() == TextView22.getText() &&
+                TextView12.getText() == TextView32.getText() &&
+                TextView12.getText() == TextView42.getText() &&
+                TextView12.getText() == TextView52.getText()) {
             disableTextViews();
             playerXScore++;
             displayXScore();
             Toast.makeText(this, "You win.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView13.getText() == "X" && TextView13.getText() == TextView23.getText() && TextView13.getText() == TextView33.getText() && TextView13.getText() == TextView43.getText() && TextView13.getText() == TextView53.getText()) {
+        if (TextView13.getText() == "X" && TextView13.getText() == TextView23.getText() &&
+                TextView13.getText() == TextView33.getText() &&
+                TextView13.getText() == TextView43.getText() &&
+                TextView13.getText() == TextView53.getText()) {
             disableTextViews();
             playerXScore++;
             displayXScore();
@@ -711,14 +749,20 @@ public class Single_X_five extends AppCompatActivity {
             return true;
         }
 
-        if (TextView14.getText() == "X" && TextView14.getText() == TextView24.getText() && TextView14.getText() == TextView34.getText() && TextView14.getText() == TextView44.getText() && TextView14.getText() == TextView54.getText()) {
+        if (TextView14.getText() == "X" && TextView14.getText() == TextView24.getText() &&
+                TextView14.getText() == TextView34.getText() &&
+                TextView14.getText() == TextView44.getText() &&
+                TextView14.getText() == TextView54.getText()) {
             disableTextViews();
             playerXScore++;
             displayXScore();
             Toast.makeText(this, "You win.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView15.getText() == "X" && TextView15.getText() == TextView25.getText() && TextView15.getText() == TextView35.getText() && TextView15.getText() == TextView45.getText() && TextView15.getText() == TextView55.getText()) {
+        if (TextView15.getText() == "X" && TextView15.getText() == TextView25.getText() &&
+                TextView15.getText() == TextView35.getText() &&
+                TextView15.getText() == TextView45.getText() &&
+                TextView15.getText() == TextView55.getText()) {
             disableTextViews();
             playerXScore++;
             displayXScore();
@@ -726,107 +770,162 @@ public class Single_X_five extends AppCompatActivity {
             return true;
         }
 
-        if (TextView11.getText() == "X" && TextView11.getText() == TextView22.getText() && TextView11.getText() == TextView33.getText() && TextView11.getText() == TextView44.getText() && TextView11.getText() == TextView55.getText()) {
+        if (TextView11.getText() == "X" && TextView11.getText() == TextView22.getText() &&
+                TextView11.getText() == TextView33.getText() &&
+                TextView11.getText() == TextView44.getText() &&
+                TextView11.getText() == TextView55.getText()) {
             disableTextViews();
             playerXScore++;
             displayXScore();
             Toast.makeText(this, "You win.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView15.getText() == "X" && TextView15.getText() == TextView24.getText() && TextView15.getText() == TextView33.getText() && TextView15.getText() == TextView42.getText() && TextView15.getText() == TextView51.getText()) {
+        if (TextView15.getText() == "X" && TextView15.getText() == TextView24.getText() &&
+                TextView15.getText() == TextView33.getText() &&
+                TextView15.getText() == TextView42.getText() &&
+                TextView15.getText() == TextView51.getText()) {
             disableTextViews();
             playerXScore++;
             displayXScore();
             Toast.makeText(this, "You win.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView11.getText() == "O" && TextView11.getText() == TextView12.getText() && TextView11.getText() == TextView13.getText() && TextView11.getText() == TextView14.getText() && TextView11.getText() == TextView15.getText()) {
+        if (TextView11.getText() == "O" && TextView11.getText() == TextView12.getText() &&
+                TextView11.getText() == TextView13.getText() &&
+                TextView11.getText() == TextView14.getText() &&
+                TextView11.getText() == TextView15.getText()) {
             disableTextViews();
             playerOScore++;
             displayOScore();
-            Toast.makeText(this, "Player O has won", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Computer wins.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView21.getText() == "O" && TextView21.getText() == TextView22.getText() && TextView21.getText() == TextView23.getText() && TextView21.getText() == TextView24.getText() && TextView21.getText() == TextView25.getText()) {
+        if (TextView21.getText() == "O" && TextView21.getText() == TextView22.getText() &&
+                TextView21.getText() == TextView23.getText() &&
+                TextView21.getText() == TextView24.getText() &&
+                TextView21.getText() == TextView25.getText()) {
             disableTextViews();
             playerOScore++;
             displayOScore();
-            Toast.makeText(this, "Player O has won", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Computer wins.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView31.getText() == "O" && TextView31.getText() == TextView32.getText() && TextView31.getText() == TextView33.getText() && TextView31.getText() == TextView34.getText() && TextView31.getText() == TextView35.getText()) {
+        if (TextView31.getText() == "O" && TextView31.getText() == TextView32.getText() &&
+                TextView31.getText() == TextView33.getText() &&
+                TextView31.getText() == TextView34.getText() &&
+                TextView31.getText() == TextView35.getText()) {
             disableTextViews();
             playerOScore++;
             displayOScore();
-            Toast.makeText(this, "Player O has won", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Computer wins.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView41.getText() == "O" && TextView41.getText() == TextView42.getText() && TextView41.getText() == TextView43.getText() && TextView41.getText() == TextView44.getText() && TextView41.getText() == TextView45.getText()) {
+        if (TextView41.getText() == "O" && TextView41.getText() == TextView42.getText() &&
+                TextView41.getText() == TextView43.getText() &&
+                TextView41.getText() == TextView44.getText() &&
+                TextView41.getText() == TextView45.getText()) {
             disableTextViews();
             playerOScore++;
             displayOScore();
-            Toast.makeText(this, "Player O has won", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Computer wins.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView51.getText() == "O" && TextView51.getText() == TextView52.getText() && TextView51.getText() == TextView53.getText() && TextView51.getText() == TextView54.getText() && TextView51.getText() == TextView55.getText()) {
+        if (TextView51.getText() == "O" && TextView51.getText() == TextView52.getText() &&
+                TextView51.getText() == TextView53.getText() &&
+                TextView51.getText() == TextView54.getText() &&
+                TextView51.getText() == TextView55.getText()) {
             disableTextViews();
             playerOScore++;
             displayOScore();
-            Toast.makeText(this, "Player O has won", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Computer wins.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView11.getText() == "O" && TextView11.getText() == TextView21.getText() && TextView11.getText() == TextView31.getText() && TextView11.getText() == TextView41.getText() && TextView11.getText() == TextView51.getText()) {
+        if (TextView11.getText() == "O" && TextView11.getText() == TextView21.getText() &&
+                TextView11.getText() == TextView31.getText() &&
+                TextView11.getText() == TextView41.getText() &&
+                TextView11.getText() == TextView51.getText()) {
             disableTextViews();
             playerOScore++;
             displayOScore();
-            Toast.makeText(this, "Player O has won", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Computer wins.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView12.getText() == "O" && TextView12.getText() == TextView22.getText() && TextView12.getText() == TextView32.getText() && TextView12.getText() == TextView42.getText() && TextView12.getText() == TextView52.getText()) {
+        if (TextView12.getText() == "O" && TextView12.getText() == TextView22.getText() &&
+                TextView12.getText() == TextView32.getText() &&
+                TextView12.getText() == TextView42.getText() &&
+                TextView12.getText() == TextView52.getText()) {
             disableTextViews();
             playerOScore++;
             displayOScore();
-            Toast.makeText(this, "Player O has won", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Computer wins.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView13.getText() == "O" && TextView13.getText() == TextView23.getText() && TextView13.getText() == TextView33.getText() && TextView13.getText() == TextView43.getText() && TextView13.getText() == TextView53.getText()) {
+        if (TextView13.getText() == "O" && TextView13.getText() == TextView23.getText() &&
+                TextView13.getText() == TextView33.getText() &&
+                TextView13.getText() == TextView43.getText() &&
+                TextView13.getText() == TextView53.getText()) {
             disableTextViews();
             playerOScore++;
             displayOScore();
-            Toast.makeText(this, "Player O has won", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Computer wins.", Toast.LENGTH_LONG).show();
             return true;
         }
 
-        if (TextView14.getText() == "O" && TextView14.getText() == TextView24.getText() && TextView14.getText() == TextView34.getText() && TextView14.getText() == TextView44.getText() && TextView14.getText() == TextView54.getText()) {
+        if (TextView14.getText() == "O" && TextView14.getText() == TextView24.getText() &&
+                TextView14.getText() == TextView34.getText() &&
+                TextView14.getText() == TextView44.getText() &&
+                TextView14.getText() == TextView54.getText()) {
             disableTextViews();
             playerOScore++;
             displayOScore();
-            Toast.makeText(this, "Player O has won", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Computer wins.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView15.getText() == "O" && TextView15.getText() == TextView25.getText() && TextView15.getText() == TextView35.getText() && TextView15.getText() == TextView45.getText() && TextView15.getText() == TextView55.getText()) {
+        if (TextView15.getText() == "O" && TextView15.getText() == TextView25.getText() &&
+                TextView15.getText() == TextView35.getText() &&
+                TextView15.getText() == TextView45.getText() &&
+                TextView15.getText() == TextView55.getText()) {
             disableTextViews();
             playerOScore++;
             displayOScore();
-            Toast.makeText(this, "Player O has won", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Computer wins.", Toast.LENGTH_LONG).show();
             return true;
         }
 
-        if (TextView11.getText() == "O" && TextView11.getText() == TextView22.getText() && TextView11.getText() == TextView33.getText() && TextView11.getText() == TextView44.getText() && TextView11.getText() == TextView55.getText()) {
+        if (TextView11.getText() == "O" && TextView11.getText() == TextView22.getText() &&
+                TextView11.getText() == TextView33.getText() &&
+                TextView11.getText() == TextView44.getText() &&
+                TextView11.getText() == TextView55.getText()) {
             disableTextViews();
             playerOScore++;
             displayOScore();
-            Toast.makeText(this, "Player O has won", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Computer wins.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView15.getText() == "O" && TextView15.getText() == TextView24.getText() && TextView15.getText() == TextView33.getText() && TextView15.getText() == TextView42.getText() && TextView15.getText() == TextView51.getText()) {
+        if (TextView15.getText() == "O" && TextView15.getText() == TextView24.getText() &&
+                TextView15.getText() == TextView33.getText() &&
+                TextView15.getText() == TextView42.getText() &&
+                TextView15.getText() == TextView51.getText()) {
             disableTextViews();
             playerOScore++;
             displayOScore();
-            Toast.makeText(this, "Player O has won", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Computer wins.", Toast.LENGTH_LONG).show();
             return true;
         }
-        if (TextView11.getText() != "" && TextView12.getText() != "" && TextView13.getText() != "" && TextView14.getText() != "" && TextView15.getText() != "" && TextView21.getText() != "" && TextView22.getText() != "" && TextView23.getText() != "" && TextView24.getText() != "" && TextView25.getText() != "" && TextView31.getText() != "" && TextView32.getText() != "" && TextView33.getText() != "" && TextView34.getText() != "" && TextView35.getText() != "" && TextView41.getText() != "" && TextView42.getText() != "" && TextView43.getText() != "" && TextView44.getText() != "" && TextView45.getText() != "" && TextView51.getText() != "" && TextView52.getText() != "" && TextView53.getText() != "" && TextView54.getText() != "" && TextView55.getText() != "") {
+        /*if the texts in all the textViews have been changed
+         *and there is no winner, then the game is a draw*/
+        if (TextView11.getText() != "" && TextView12.getText() != "" && TextView13.getText() != ""
+                && TextView14.getText() != "" && TextView15.getText() != ""
+                && TextView21.getText() != "" && TextView22.getText() != ""
+                && TextView23.getText() != "" && TextView24.getText() != ""
+                && TextView25.getText() != "" && TextView31.getText() != ""
+                && TextView32.getText() != "" && TextView33.getText() != ""
+                && TextView34.getText() != "" && TextView35.getText() != ""
+                && TextView41.getText() != "" && TextView42.getText() != ""
+                && TextView43.getText() != "" && TextView44.getText() != ""
+                && TextView45.getText() != "" && TextView51.getText() != ""
+                && TextView52.getText() != "" && TextView53.getText() != ""
+                && TextView54.getText() != "" && TextView55.getText() != "") {
             disableTextViews();
             Toast.makeText(this, "Game is a draw.", Toast.LENGTH_LONG).show();
             return true;
@@ -834,6 +933,7 @@ public class Single_X_five extends AppCompatActivity {
         return false;
     }
 
+    /*disables all the text views*/
     private void disableTextViews() {
         TextView11.setClickable(false);
         TextView12.setClickable(false);
@@ -862,7 +962,9 @@ public class Single_X_five extends AppCompatActivity {
         TextView55.setClickable(false);
     }
 
+    /*resets the board*/
     public void resetBoard(View view) {
+        /*clears all the texts within the textViews*/
         TextView11.setText("");
         TextView12.setText("");
         TextView13.setText("");
@@ -889,6 +991,7 @@ public class Single_X_five extends AppCompatActivity {
         TextView54.setText("");
         TextView55.setText("");
 
+        /*makes all textViews clickable*/
         TextView11.setClickable(true);
         TextView12.setClickable(true);
         TextView13.setClickable(true);
@@ -915,7 +1018,10 @@ public class Single_X_five extends AppCompatActivity {
         TextView54.setClickable(true);
         TextView55.setClickable(true);
 
+        /*clears the arrayList*/
         List.clear();
+
+        /*adds textViews to the arrayList*/
         List.add(TextView11);
         List.add(TextView12);
         List.add(TextView13);
@@ -943,10 +1049,12 @@ public class Single_X_five extends AppCompatActivity {
         List.add(TextView55);
     }
 
+    /*displays player score*/
     private void displayXScore() {
         ((TextView) findViewById(R.id.player_x_score)).setText(String.valueOf(playerXScore));
     }
 
+    /*displays computer score*/
     private void displayOScore() {
         ((TextView) findViewById(R.id.player_o_score)).setText(String.valueOf(playerOScore));
     }
