@@ -94,16 +94,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView11.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView11.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -115,16 +110,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView12.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView12.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -136,16 +126,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView13.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView13.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -157,16 +142,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView14.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView14.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -178,16 +158,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView15.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView15.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -199,16 +174,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView21.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView21.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -220,16 +190,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView22.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView22.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -241,16 +206,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView23.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView23.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -262,16 +222,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView24.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView24.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -283,16 +238,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView25.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView25.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -304,16 +254,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView31.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView31.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -325,16 +270,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView32.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView32.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -346,16 +286,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView33.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView33.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -367,16 +302,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView34.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView34.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -388,16 +318,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView35.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView35.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -409,16 +334,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView41.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView41.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -430,16 +350,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView42.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView42.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -451,16 +366,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView43.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView43.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -472,16 +382,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView44.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView44.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -493,16 +398,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView45.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView45.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -514,16 +414,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView51.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView51.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -535,16 +430,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView52.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView52.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -556,16 +446,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView53.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView53.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -577,16 +462,11 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView54.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView54.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -598,23 +478,18 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
                     if (playerToPlay == 1) {
                         TextView55.setText("X");
                         playerToPlay = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerToPlay == 2) {
                         TextView55.setText("O");
                         playerToPlay = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
     }
 
     /*returns true if there is a winner*/
-    private boolean checkWinner() {
+    private void checkWinner() {
         if (TextView11.getText() != "" && TextView11.getText() == TextView12.getText() &&
                 TextView11.getText() == TextView13.getText() &&
                 TextView11.getText() == TextView14.getText() &&
@@ -623,7 +498,7 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView11.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView21.getText() != "" && TextView21.getText() == TextView22.getText() &&
                 TextView21.getText() == TextView23.getText() &&
@@ -633,7 +508,7 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView21.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView31.getText() != "" && TextView31.getText() == TextView32.getText() &&
                 TextView31.getText() == TextView33.getText() &&
@@ -643,7 +518,7 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView31.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView41.getText() != "" && TextView41.getText() == TextView42.getText() &&
                 TextView41.getText() == TextView43.getText() &&
@@ -653,7 +528,7 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView41.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView51.getText() != "" && TextView51.getText() == TextView52.getText() &&
                 TextView51.getText() == TextView53.getText() &&
@@ -663,7 +538,7 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView51.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView11.getText() != "" && TextView11.getText() == TextView21.getText() &&
                 TextView11.getText() == TextView31.getText() &&
@@ -673,7 +548,7 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView11.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView12.getText() != "" && TextView12.getText() == TextView22.getText() &&
                 TextView12.getText() == TextView32.getText() &&
@@ -683,7 +558,7 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView12.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView13.getText() != "" && TextView13.getText() == TextView23.getText() &&
                 TextView13.getText() == TextView33.getText() &&
@@ -693,7 +568,7 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView13.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView14.getText() != "" && TextView14.getText() == TextView24.getText() &&
                 TextView14.getText() == TextView34.getText() &&
@@ -703,7 +578,7 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView14.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView15.getText() != "" && TextView15.getText() == TextView25.getText() &&
                 TextView15.getText() == TextView35.getText() &&
@@ -713,7 +588,7 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView15.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView11.getText() != "" && TextView11.getText() == TextView22.getText() &&
                 TextView11.getText() == TextView33.getText() &&
@@ -723,7 +598,7 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView11.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView15.getText() != "" && TextView15.getText() == TextView24.getText() &&
                 TextView15.getText() == TextView33.getText() &&
@@ -733,7 +608,7 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView15.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         /*if the texts in all the textViews have been changed
          *and there is no winner, then the game is a draw
@@ -757,7 +632,6 @@ public class TwoPlayer_five_by_five extends AppCompatActivity {
             }
             Toast.makeText(this, "Game is a draw.", Toast.LENGTH_LONG).show();
         }
-        return false;
     }
 
     /*increments the score of the player who wins

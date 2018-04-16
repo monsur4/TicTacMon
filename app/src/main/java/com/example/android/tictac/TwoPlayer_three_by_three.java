@@ -62,16 +62,11 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
                     if (playerTurn == 1) {
                         TextView11.setText("X");
                         playerTurn = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerTurn == 2) {
                         TextView11.setText("O");
                         playerTurn = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -83,16 +78,11 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
                     if (playerTurn == 1) {
                         TextView12.setText("X");
                         playerTurn = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerTurn == 2) {
                         TextView12.setText("O");
                         playerTurn = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -104,16 +94,11 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
                     if (playerTurn == 1) {
                         TextView13.setText("X");
                         playerTurn = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerTurn == 2) {
                         TextView13.setText("O");
                         playerTurn = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -125,16 +110,11 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
                     if (playerTurn == 1) {
                         TextView21.setText("X");
                         playerTurn = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerTurn == 2) {
                         TextView21.setText("O");
                         playerTurn = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -146,16 +126,11 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
                     if (playerTurn == 1) {
                         TextView22.setText("X");
                         playerTurn = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerTurn == 2) {
                         TextView22.setText("O");
                         playerTurn = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -167,16 +142,11 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
                     if (playerTurn == 1) {
                         TextView23.setText("X");
                         playerTurn = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerTurn == 2) {
                         TextView23.setText("O");
                         playerTurn = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -188,16 +158,11 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
                     if (playerTurn == 1) {
                         TextView31.setText("X");
                         playerTurn = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerTurn == 2) {
                         TextView31.setText("O");
                         playerTurn = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -209,16 +174,11 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
                     if (playerTurn == 1) {
                         TextView32.setText("X");
                         playerTurn = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerTurn == 2) {
                         TextView32.setText("O");
                         playerTurn = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
@@ -230,30 +190,25 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
                     if (playerTurn == 1) {
                         TextView33.setText("X");
                         playerTurn = 2;
-                        if (checkWinner()) {
-                            return;
-                        }
                     } else if (playerTurn == 2) {
                         TextView33.setText("O");
                         playerTurn = 1;
-                        if (checkWinner()) {
-                            return;
-                        }
                     }
+                    checkWinner();
                 }
             }
         });
     }
 
     /*returns true if there is a winner*/
-    private boolean checkWinner() {
+    private void checkWinner() {
         if (TextView11.getText() != "" && TextView11.getText() == TextView12.getText() &&
                 TextView11.getText() == TextView13.getText()) {
             disableTextViews();
             assignPlayerScore();
             Toast.makeText(this, TextView11.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView21.getText() != "" && TextView21.getText() == TextView22.getText() &&
                 TextView21.getText() == TextView23.getText()) {
@@ -261,7 +216,7 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView21.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView31.getText() != "" && TextView31.getText() == TextView32.getText() &&
                 TextView31.getText() == TextView33.getText()) {
@@ -269,7 +224,7 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView31.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView11.getText() != "" && TextView11.getText() == TextView21.getText() &&
                 TextView11.getText() == TextView31.getText()) {
@@ -277,7 +232,7 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView11.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView12.getText() != "" && TextView12.getText() == TextView22.getText() &&
                 TextView12.getText() == TextView32.getText()) {
@@ -285,7 +240,7 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView12.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView13.getText() != "" && TextView13.getText() == TextView23.getText() &&
                 TextView13.getText() == TextView33.getText()) {
@@ -293,7 +248,7 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView13.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView11.getText() != "" && TextView11.getText() == TextView22.getText() &&
                 TextView11.getText() == TextView33.getText()) {
@@ -301,7 +256,7 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView11.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         if (TextView13.getText() != "" && TextView13.getText() == TextView22.getText() &&
                 TextView13.getText() == TextView31.getText()) {
@@ -309,7 +264,7 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
             assignPlayerScore();
             Toast.makeText(this, TextView13.getText() + " wins.",
                     Toast.LENGTH_LONG).show();
-            return true;
+            return;
         }
         /*if the texts in all the textViews have been changed
          *and there is no winner, then the game is a draw
@@ -325,7 +280,6 @@ public class TwoPlayer_three_by_three extends AppCompatActivity {
             }
             Toast.makeText(this, "Game is a draw.", Toast.LENGTH_LONG).show();
         }
-        return false;
     }
 
     /*disables all the text views*/
