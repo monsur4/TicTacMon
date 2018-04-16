@@ -72,12 +72,7 @@ public class DefaultGameActivity extends AppCompatActivity {
                     TextView11.setText("X");
                     if (!checkWinner()) {
                         List.remove(TextView11);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -90,12 +85,7 @@ public class DefaultGameActivity extends AppCompatActivity {
                     TextView12.setText("X");
                     if (!checkWinner()) {
                         List.remove(TextView12);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -108,12 +98,7 @@ public class DefaultGameActivity extends AppCompatActivity {
                     TextView13.setText("X");
                     if (!checkWinner()) {
                         List.remove(TextView13);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -126,12 +111,7 @@ public class DefaultGameActivity extends AppCompatActivity {
                     TextView21.setText("X");
                     if (!checkWinner()) {
                         List.remove(TextView21);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -144,12 +124,7 @@ public class DefaultGameActivity extends AppCompatActivity {
                     TextView22.setText("X");
                     if (!checkWinner()) {
                         List.remove(TextView22);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -162,12 +137,7 @@ public class DefaultGameActivity extends AppCompatActivity {
                     TextView23.setText("X");
                     if (!checkWinner()) {
                         List.remove(TextView23);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -180,12 +150,7 @@ public class DefaultGameActivity extends AppCompatActivity {
                     TextView31.setText("X");
                     if (!checkWinner()) {
                         List.remove(TextView31);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -198,12 +163,7 @@ public class DefaultGameActivity extends AppCompatActivity {
                     TextView32.setText("X");
                     if (!checkWinner()) {
                         List.remove(TextView32);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -216,12 +176,7 @@ public class DefaultGameActivity extends AppCompatActivity {
                     TextView33.setText("X");
                     if (!checkWinner()) {
                         List.remove(TextView33);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -369,6 +324,16 @@ public class DefaultGameActivity extends AppCompatActivity {
             return true;
         }
         return false;
+    }
+
+    /*makes computer play its move*/
+    private void computerPlay(){
+        Random rand = new Random();
+        final int randomNumber = rand.nextInt(List.size());
+        TextView computerPlay = List.get(randomNumber);
+        computerPlay.setText("O");
+        checkWinner();
+        List.remove(randomNumber);
     }
 
     /*disables all the text views*/

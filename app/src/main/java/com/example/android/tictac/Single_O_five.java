@@ -112,12 +112,7 @@ public class Single_O_five extends AppCompatActivity {
         List.add(TextView55);
 
         /*computer starts the game by selecting a random textView from the arrayList to play*/
-        Random rand = new Random();
-        final int randomNumber = rand.nextInt(List.size());
-        TextView computerPlay = List.get(randomNumber);
-        computerPlay.setText("X");
-        checkWinner();
-        List.remove(randomNumber);
+        computerPlay();
 
         /*sets the textView's text to O(if it is being selected for the first time)
          *check if there is a winner
@@ -130,12 +125,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView11.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView11);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("X");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -148,12 +138,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView12.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView12);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -166,12 +151,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView13.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView13);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -184,12 +164,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView14.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView14);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -202,12 +177,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView15.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView15);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -220,12 +190,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView21.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView21);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -238,12 +203,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView22.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView22);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -256,12 +216,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView23.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView23);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
 
                 }
@@ -275,12 +230,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView24.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView24);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -293,12 +243,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView25.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView25);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -311,12 +256,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView31.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView31);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -329,12 +269,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView32.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView32);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -347,12 +282,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView33.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView33);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -365,12 +295,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView34.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView34);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -383,12 +308,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView35.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView35);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -401,12 +321,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView41.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView41);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -419,12 +334,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView42.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView42);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -437,12 +347,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView43.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView43);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -455,12 +360,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView44.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView44);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
 
                 }
@@ -474,12 +374,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView45.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView45);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -492,12 +387,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView51.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView51);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -510,12 +400,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView52.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView52);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -528,12 +413,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView53.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView53);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
@@ -546,12 +426,7 @@ public class Single_O_five extends AppCompatActivity {
                     TextView54.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView54);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
 
                 }
@@ -565,16 +440,21 @@ public class Single_O_five extends AppCompatActivity {
                     TextView55.setText("O");
                     if (!checkWinner()) {
                         List.remove(TextView55);
-                        Random rand = new Random();
-                        final int randomNumber = rand.nextInt(List.size());
-                        TextView computerPlay = List.get(randomNumber);
-                        computerPlay.setText("O");
-                        checkWinner();
-                        List.remove(randomNumber);
+                        computerPlay();
                     }
                 }
             }
         });
+    }
+
+    /*makes the computer play its move*/
+    private void computerPlay(){
+        Random rand = new Random();
+        final int randomNumber = rand.nextInt(List.size());
+        TextView computerPlay = List.get(randomNumber);
+        computerPlay.setText("X");
+        checkWinner();
+        List.remove(randomNumber);
     }
 
     /*returns true if there is a winner*/
