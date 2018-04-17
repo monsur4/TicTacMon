@@ -291,7 +291,7 @@ public class single_x_four extends AppCompatActivity {
             public void onClick(View view) {
                 if (TextView44.getText().toString().equals("")) {
                     TextView44.setText("X");
-                    if (checkWinner()) {
+                    if (!checkWinner()) {
                         List.remove(TextView44);
                         computerPlay();
                     }
